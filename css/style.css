@@ -1,0 +1,211 @@
+:root{
+
+    --bg-color: #121212;
+    --surface-color: #1E1E1E;
+    --primary-color: #FF6B00;
+    --text-white: #FFFFFF;
+    --text-gray: #AAAAAA;
+
+}
+
+/* === ESTILOS GENERALES === */
+
+*{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+
+    background-color: var(--bg-color);
+    color: var(--text-white);
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+
+}
+
+/* === CLASES UTILITARIAS === */
+/* Contenedor central */
+
+.container {
+
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+
+}
+
+/* === LAYOUT SIDEBAR (Actualizar con flexbox mas adelante) ===*/
+/* contenedor sidebar + content*/
+
+.workspace-wrapper{
+
+    width: 100%;
+    overflow: hidden; /* Esto es temporal profe, cuando use flexbox se cambia */
+
+}
+
+/* La barra lateral */
+
+.sidebar{
+
+    float:left;
+    width: 200px;
+    padding-right: 20px;
+    border-right: 1px solid var(--primary-color); /*Division sutil entre el contedido del workspace y el sidebar*/
+    min-height: 80VH;
+    margin: 0;
+
+}
+
+/* El Contendido Principal */
+
+.content-area{
+
+    float:left;
+    width: calc(100% - 210px);
+    padding-left: 30px;
+}
+
+
+/* Mejoro un poco las tarjetas de Rodaje*/
+
+.rodaje-card{
+
+    background-color: var(--surface-color);
+    border: 1px solid #444;
+    border-left-width: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3)
+
+}
+
+
+
+/* Botón Naranja (Reutilizable)*/
+
+.btn-primary{
+
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--text-white);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 35px;
+    text-decoration: none;  /* Esto solo me quita el subrayado de los links profe :3 */
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+
+}
+
+/* Botón Circular (+) */
+
+.btn-circle{
+
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--text-white);
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align:center;
+    border-radius: 50%;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    transition: transform 0.2;  /* Quedese tranquilo profe, esto yo lo conozco JAJA*/
+
+}
+
+.btn-circle:hover{
+
+    transform: scale(1.1);
+    background-color: #E65100;
+
+}
+
+
+/*Boton del side bar*/
+
+.btn-sidebar{
+
+
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding:12px 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    text-decoration: none;
+    background-color: transparent;
+    color: #aaa;
+    border: 1px solid transparent;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.2;
+
+}
+
+.btn-sidebar:hover{
+
+    background-color: #ac5712;
+    color:white;
+    
+
+}
+
+.btn-sidebar.active{
+
+    background-color: var(--primary-color);
+    color:white;
+    box-shadow: 0 4px 10px rgba(255, 107, 0, 0.2);
+}
+
+/* ===ESTILOS DE NAVEGACIÓN */
+
+nav{
+
+    background-color: var(--surface-color);
+    padding: 15px;
+    border-bottom: 2px solid var(--primary-color);
+    margin-bottom: 20px;
+
+}
+
+/* === ESTILOS DE CARTAS === */
+
+.card{
+
+    background-color: var(--surface-color);
+    border: 1px solid #333;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 15px;
+    display: inline-block;
+    width: 30%;
+    vertical-align: top;
+
+}
+
+/* Ajuste para Teléfonos*/
+
+@media (max-width:760px) {
+
+    .card{
+
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+
+    }
+    
+}
