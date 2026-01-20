@@ -1,211 +1,127 @@
-:root{
 
+/* VARIABLES */
+:root {
     --bg-color: #121212;
     --surface-color: #1E1E1E;
     --primary-color: #FF6B00;
     --text-white: #FFFFFF;
     --text-gray: #AAAAAA;
-
 }
 
-/* === ESTILOS GENERALES === */
-
-*{
-
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-
-}
-
-body{
-
+/*  BASE */
+body {
     background-color: var(--bg-color);
     color: var(--text-white);
     font-family: Arial, sans-serif;
     line-height: 1.5;
-
 }
 
-/* === CLASES UTILITARIAS === */
-/* Contenedor central */
-
-.container {
-
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px 0;
-
+/* Links (Para quitar el azul feo de Bootstrap por defecto) */
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: 0.3s;
+}
+a:hover {
+    color: var(--primary-color);
 }
 
-/* === LAYOUT SIDEBAR (Actualizar con flexbox mas adelante) ===*/
-/* contenedor sidebar + content*/
-
-.workspace-wrapper{
-
-    width: 100%;
-    overflow: hidden; /* Esto es temporal profe, cuando use flexbox se cambia */
-
-}
-
-/* La barra lateral */
-
-.sidebar{
-
-    float:left;
-    width: 200px;
-    padding-right: 20px;
-    border-right: 1px solid var(--primary-color); /*Division sutil entre el contedido del workspace y el sidebar*/
-    min-height: 80VH;
-    margin: 0;
-
-}
-
-/* El Contendido Principal */
-
-.content-area{
-
-    float:left;
-    width: calc(100% - 210px);
-    padding-left: 30px;
-}
-
-
-/* Mejoro un poco las tarjetas de Rodaje*/
-
-.rodaje-card{
-
-    background-color: var(--surface-color);
-    border: 1px solid #444;
-    border-left-width: 5px;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.3)
-
-}
-
-
-
-/* Botón Naranja (Reutilizable)*/
-
-.btn-primary{
-
-    display: inline-block;
-    background-color: var(--primary-color);
-    color: var(--text-white);
+/* BOTONES (Aca profe, solo cambio para que boostrap no me ponga esos colores que trae por defecto) */
+.btn-primary {
+    background-color: var(--primary-color) !important; 
+    border-color: var(--primary-color) !important;
+    color: var(--text-white) !important;
+    font-weight: bold;
+    border-radius: 35px; 
     padding: 10px 20px;
-    border: none;
-    border-radius: 35px;
-    text-decoration: none;  /* Esto solo me quita el subrayado de los links profe :3 */
-    font-weight: bold;
-    cursor: pointer;
-    text-align: center;
-
 }
 
-/* Botón Circular (+) */
-
-.btn-circle{
-
-    display: inline-block;
-    background-color: var(--primary-color);
-    color: var(--text-white);
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    text-align:center;
-    border-radius: 50%;
-    font-size: 24px;
-    font-weight: bold;
-    text-decoration: none;
-    cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-    transition: transform 0.2;  /* Quedese tranquilo profe, esto yo lo conozco JAJA*/
-
+.btn-primary:hover {
+    background-color: #e65100 !important; 
+    color: white !important;
 }
 
-.btn-circle:hover{
-
-    transform: scale(1.1);
-    background-color: #E65100;
-
-}
-
-
-/*Boton del side bar*/
-
-.btn-sidebar{
-
-
-    display: block;
-    width: 100%;
-    text-align: left;
-    padding:12px 15px;
-    margin-bottom: 10px;
-    border-radius: 8px;
-    text-decoration: none;
-    background-color: transparent;
-    color: #aaa;
-    border: 1px solid transparent;
-    cursor: pointer;
-    font-weight: bold;
-    transition: all 0.2;
-
-}
-
-.btn-sidebar:hover{
-
-    background-color: #ac5712;
-    color:white;
-    
-
-}
-
-.btn-sidebar.active{
-
-    background-color: var(--primary-color);
-    color:white;
-    box-shadow: 0 4px 10px rgba(255, 107, 0, 0.2);
-}
-
-/* ===ESTILOS DE NAVEGACIÓN */
-
-nav{
-
-    background-color: var(--surface-color);
-    padding: 15px;
-    border-bottom: 2px solid var(--primary-color);
-    margin-bottom: 20px;
-
-}
-
-/* === ESTILOS DE CARTAS === */
-
-.card{
-
+/* TARJETAS */
+.card {
     background-color: var(--surface-color);
     border: 1px solid #333;
-    padding: 20px;
-    margin: 10px;
+    color: white;
     border-radius: 15px;
-    display: inline-block;
-    width: 30%;
-    vertical-align: top;
-
 }
 
-/* Ajuste para Teléfonos*/
+/* INPUTS DEL FORMULARIO*/
+.form-control {
+    background-color: #2c2c2c;
+    border: 1px solid #444;
+    color: white;
+}
+.form-control:focus {
+    background-color: #2c2c2c;
+    color: white;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(255, 107, 0, 0.25);
+}
 
-@media (max-width:760px) {
+/* === CORRECCIÓN FINAL DE COLORES  FEOS  DE BOOTSTRAP === */
 
-    .card{
+.bg-primary {
+    background-color: var(--primary-color) !important;
+    color: #fff !important;
+}
 
-        width: 100%;
-        display: block;
-        margin-bottom: 20px;
+.text-primary {
+    color: var(--primary-color) !important;
+}
 
-    }
-    
+.border-primary {
+    border-color: var(--primary-color) !important;
+}
+
+/* Corrección extra para los badges redondeados si se ponen rebeldes, PQ SI, ME PASO AJAJAJ */
+.badge.bg-primary {
+    background-color: var(--primary-color) !important;
+}
+
+/* === ANIMACIONES Y EFECTOS === */
+/* ACA PIENSO DEJARLO TODO PROFE, PA QUE VEA QUE SOY BUENO :3 */
+
+/* Efecto de levitación para Tarjetas */
+.card-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    cursor: pointer;
+}
+
+.card-hover:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(255, 107, 0, 0.15) !important; 
+    border-color: var(--primary-color) !important;
+}
+
+/* Efecto Rebote para el Botón + */
+.btn-pulse {
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+}
+
+.btn-pulse:hover {
+    transform: scale(1.15) rotate(90deg); 
+    background-color: #ff8c00 !important;
+    box-shadow: 0 0 15px var(--primary-color);
+}
+
+/*un ajuste para el boton dentro de las tarjetas*/
+.btn-square {
+            width: 30px; 
+            height: 30px; 
+            padding: 0; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center;
+            font-weight: bold;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) ;
+        }
+
+    .btn-square:hover {
+    transform: scale(1.15) rotate(90deg); 
+    background-color: #ff8c00 !important;
+    box-shadow: 0 0 15px var(--primary-color);
 }
