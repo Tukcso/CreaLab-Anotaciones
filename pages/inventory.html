@@ -1,90 +1,138 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recursos | CreaLab</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
-</head>
-<body>
     
-    <nav>
+</head>
 
-        <div class="container">   
+<body>
 
-            <span style="font-size:20px; font-weight: bold;">Crea<span Style="color: var(--primary-color);">Lab</span></span>
+    <nav class="navbar navbar-expand-lg navbar-dark border-bottom border-secondary mb-5"
+        style="background-color: var(--surface-color);">
 
-            <div style="float: right;">
+        <div class="container">
 
-                <a href="./dashboard.html" style="margin-right: 15px; color: white; ">Proyectos</a>
-                <a href="./inventory.html" style="color: var(--primary-color);">Recursos</a>
-                <a href="../index.html" style="margin-left: 15; font-size: 12px; color: #AAA">Salir</a>
+            <a class="navbar-brand fw-bold" href="#">Crea<span style="color:var(--primary-color)">Lab</span></a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item"><a class="nav-link" href="dashboard.html">Proyectos</a></li>
+                    <li class="nav-item"><a class="nav-link active text-warning" href="#">Recursos</a></li>
+                    <li class="nav-item"><a class="nav-link text-muted" href="../index.html">Salir</a></li>
+
+                </ul>
 
             </div>
 
         </div>
 
-    </nav>  
-    
-    <main class="container text-center">
+    </nav>
 
-        <header style="margin-bottom: 30px; text-align: center;">
+    <main class="container">
 
-            <h1> MIS RECURSOS </h1>
+        <div class="position-relative text-center mb-5">
 
-                <div style="text-align:right; margin-top: -20px; padding-right: 10px;">
+            <h1 class="fw-bold">MIS RECURSOS</h1>
+            <a href="#"
+                class="btn btn-primary rounded-circle d-flex align-items-center justify-content-center shadow position-absolute top-50 end-0 translate-middle-y"
+                style="width: 45px; height: 45px; font-size: 24px; font-weight: bold; text-decoration: none;">+</a>
 
-                    <a href="#" class="btn-circle" title="Agregar Equipo"> + </a>
-                    
+        </div>
+
+        <section class="mb-5">
+
+            <h2 class="badge rounded-pill bg-primary fs-5 px-4 py-2 mb-4">Propios</h2>
+
+            <div class="row g-4">
+
+                <div class="col-12 col-md-6 col-lg-4">
+
+                    <article class="card h-100 p-3 shadow-sm">
+
+                        <div class="d-flex align-items-center">
+
+                            <div>
+
+                                <h5 class="text-warning mb-1">Cannon R5 Body</h5>
+                                <p class="text-white small mb-2">Serie: 482910</p>
+                                <span class="text-success small fw-bold">● Óptimo</span>
+                            </div>
+
+                        </div>
+
+                    </article>
+
                 </div>
 
-        </header>    
+                <div class="col-12 col-md-6 col-lg-4">
 
-        <section style="margin-bottom: 50px;">
+                    <article class="card h-100 p-3 shadow-sm">
 
-            <h2 style="background-color: var(--primary-color); display: inline-block; padding: 5px 20px; border-radius: 20px; color: white; margin-bottom: 20px; font-size: 18px;"> Propios </h2>
+                        <div class="d-flex align-items-center">
 
-            <div style="text-align: left;">
+                            <div>
 
-                <article class="card">
+                                <h5 class="text-warning mb-1">Lente 50mm</h5>
+                                <p class="text-white small mb-2">Serie: 112233</p>
+                                <span class="text-success small fw-bold">● Óptimo</span>
 
-                    <h4 style="color: var(--primary-color);"> Cannon R5 Body</h4>
-                    <p style="font-size: 12px; color: #AAA;">Serie: 482910</p>
-                    <div style="margin-top: 10px; font-size: 12px; color: #4CAF50;"> ● Óptimo </div>
+                            </div>
 
-                </article>
+                        </div>
 
-                <article class="card">
+                    </article>
 
-                    <h4 style="color: var(--primary-color);"> Lente 50mm</h4>
-                    <p style="font-size: 12px; color: #AAA;">Serie: 112233</p>
-                    <div style="margin-top: 10px; font-size: 12px; color: #4CAF50;"> ● Óptimo </div>
+                </div>
 
-                </article>
-
-            </div>    
-
+            </div>
         </section>
 
-        <section>
+        <section class="mb-5">
+            <h2 class="badge rounded-pill bg-primary fs-5 px-4 py-2 mb-4">Alquilados</h2>
 
-            <h2 style="background-color: var(--primary-color); display: inline-block; padding: 5px 20px; border-radius: 20px; color: white; margin-bottom: 20px; font-size: 18px;"> Alquilados </h2>
+            <div class="row g-4">
 
-            <div style="text-align: left;">
+                <div class="col-12 col-md-6 col-lg-4">
 
-                <article class="card">
+                    <article class="card h-100 p-3 shadow-sm">
 
-                    <h4 style="color: white;"> Micrófono Sennheiser </h4>
-                    <p style="font-size: 12px; color:#AAA;">Serie: 458737</p>
-                    <div Style="margin-top: 10px; font-size: 12px; color: #FFC107;"> ● Rayado</div>
-                    
-                </article>
+                        <div class="d-flex align-items-center">
+
+                            <div>
+
+                                <h5 class="text-warning mb-1">Micrófono Sennheiser</h5>
+                                <p class="text-white small mb-2">Serie: 458737</p>
+                                <span class="text-warning small fw-bold">• Rayado</span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
 
             </div>
 
-        </section>    
+        </section>
 
     </main>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
+
 </html>

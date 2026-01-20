@@ -1,52 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login | CreaLab</title>
-    <link rel="stylesheet" href="css/style.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+
 </head>
+
 <body>
-    
-    <main class="container">
 
-        <section style="text-align:center; margin-top: 50px;">
+    <main class="container vh-100 d-flex justify-content-center aling-items-center">
 
-            <header style="text-align:center; margin-top:50px">
+        <section class="card p-4 p-md-5 shadow-lg" style="width: 100%; max-width: 400px; ">
 
-                <h1 style="color: var(--text-white);">Crea<span style="color: var(--primary-color);">Lab</span></h1>
-                <p style="color: var(--text-gray);"> Anotaciones de Producción</p>
+            <div class="text-center mb-4">
 
-            </header>    
+                <h1 class="font-size: 2rem; font-weight: bold;">Crea<span style="color: var(--primary-color)">Lab</span>
+                </h1>
+                <p style="color: var(--text-gray); font-size: 0.9rem">Gestión de Producción</p>
 
+            </div>
 
-            <div style="background-color: #1E1E1E; padding: 40px; border-radius: 10px; display: inline-block; text-align: left; margin-top: 20px;">  
+            <form action="./pages/dashboard.html">
 
-                <form action="pages/dashboard.html">
+                <div class="mb-3">
 
-                    <div style="margin-bottom: 15px;">
+                    <label class="form-label text-warning">Email</label>
+                    <input type="email" class="form-control">
 
-                        <label for="email" style="display: block; color:#AAA;">Email</label>
-                        <input type="email" id="email" style="width: 100%; padding: 8px;">
+                </div>
 
-                    </div>    
+                <div class="mb-4">
 
-                    <div style="margin-bottom: 20px;">
+                    <label class="form-label text-warning">Contraseña</label>
+                    <input type="password" class="form-control">
 
-                        <label for="contrasenia" style="display: block; color:#AAA;">Contraseña</label>
-                        <input type="password" id="contrasenia" style="width: 100%; padding: 8px;">
+                </div>
 
-                    </div>  
+                <button type="submit" class="btn btn-primary w-100">INGRESAR</button>
 
-                    <button type="submit" class="btn-primary" style="width: 100%;">INGRESAR</button>
+            </form>
 
-                </form>    
+            <div class="text-center mt-3">
+
+                <a href="#" style="font-size: 0.8rem; color: #666">¿Olvidaste tu contraseña?</a>
 
             </div>
 
         </section>
 
-    </main>   
+    </main>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

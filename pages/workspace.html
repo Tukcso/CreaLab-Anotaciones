@@ -1,99 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rodaje | La Venganza del Pato</title>
+    <title>Rodaje | CreaLab</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
 
-    <nav>
-
+    <nav class="navbar navbar-expand-lg navbar-dark border-bottom border-secondary mb-4"
+        style="background-color: var(--surface-color);">
         <div class="container">
-
-            <span style="font-size:20px; font-weight: bold;">Crea<span
-                    Style="color: var(--primary-color);">Lab</span></span>
-
-            <div style="float: right;">
-
-                <a href="./dashboard.html" style="margin-right: 15px; color: var(--primary-color);">Proyectos</a>
-                <a href="./inventory.html" style="color:white">Recursos</a>
-                <a href="../index.html" style="margin-left: 15; font-size: 12px; color: #AAA">Salir</a>
-
+            <a class="navbar-brand fw-bold" href="#">Crea<span style="color:var(--primary-color)">Lab</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link text-warning" href="dashboard.html">Proyectos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="inventory.html">Recursos</a></li>
+                    <li class="nav-item"><a class="nav-link text-muted" href="../index.html">Salir</a></li>
+                </ul>
             </div>
+        </div>
+    </nav>
+
+    <div class="container pb-5">
+
+        <div class="mb-3">
+
+            <h2 class="mt-2">La Venganza del Pato</h2>
 
         </div>
 
-    </nav>
+        <div class="row">
 
-    <main class="container">
+            <aside class="col-md-3 border-end border-secondary mb-4">
+                <p class="text-white small d-none d-md-block">SECCIONES</p>
+                <hr>
 
-        <div class="workspace-wrapper">
-
-            <aside class="sidebar">
-
-                <a href="#" class="btn-sidebar active">🎬 Rodaje</a>
-                <a href="#" class="btn-sidebar">🎨 Arte</a>
-                <a href="#" class="btn-sidebar">👥 Elenco</a>
-                <div style="height: 100px;"></div>
+                <div class="nav flex-column nav-pills" role="tablist">
+                    <a class="nav-link active bg-warning text-dark fw-bold mb-2" href="#">🎬 Rodaje</a>
+                    <a class="nav-link text-white mb-2" href="./arte.html">🎨 Arte</a>
+                    <a class="nav-link text-white mb-2" href="./elenco.html">👥 Elenco</a>
+                </div>
             </aside>
 
+            <section class="col-md-9 ps-md-4">
+                <h3 class="border-bottom border-secondary pb-3 mb-4">Plan de Rodaje</h3>
 
-
-            <section class="content-area">
-
-                <h2 style="margin-bottom: 20px; border-bottom: 1px solid #333; padding-bottom: 10px;">
-                    Plan de Rodaje
-                </h2>
-
-                <article class="rodaje-card" style="border-right-color: var(--primary-color);">
-
-                    <div style="float: right;"><span
-                            style="background: #1b5e20; color: #a5d6a7; padding: 4px 10px; border-radius:12px; font-size: 11p; font-weight: bold;">GRABADO</span>
+                <article class="card p-3 mb-3 border-start border-5 border-success position-relative">
+                    <div class="d-flex justify-content-between align-items-start">
+                        <div>
+                            <h5 class="mb-1">Día 1 - Martes 03/12</h5>
+                            <p class="text-white small mb-0">08:00 AM - 18:00 PM | Locación: Casa Ariel</p>
+                        </div>
+                        <span class="badge bg-success">GRABADO</span>
                     </div>
-                    <h3 style="margin-bottom: 5px"> Día 1 - Martes 03/12 </h3>
-                    <p style="color: #AAA; font-size: 14px;">
-                        08:00 AM - 18:00 PM | Locación: Casa Ariel
-                    </p>
-                    <div Style="clear: both;"></div>
-
                 </article>
 
-
-                <article class="rodaje-card" style="border-right-color: var(--primary-color);">
-
-                    <div style="float: right;"><span
-                            style="background: #a0ad2b; color: #ccec90; padding: 4px 10px; border-radius:12px; font-size: 11p; font-weight: bold;">PROCESO</span>
+                <article class="card p-3 mb-3 border-start border-5 border-warning position-relative">
+                    <div class="d-flex justify-content-between align-items-start">
+                        <div>
+                            <h5 class="mb-1">Día 2 - Sábado 06/01</h5>
+                            <p class="text-white small mb-0">08:00 AM - 18:00 PM | Locación: Parque</p>
+                        </div>
+                        <span class="badge bg-warning text-dark">PROCESO</span>
                     </div>
-                    <h3 style="margin-bottom: 5px"> Día 2 - Sabado 06/01 </h3>
-                    <p style="color: #AAA; font-size: 14px;">
-                        08:00 AM - 18:00 PM | Locación: Parque Centenario
-                    </p>
-                    <div Style="clear: both;"></div>
-
                 </article>
 
-                <article class="rodaje-card" style="border-right-color: var(--primary-color);">
-
-                    <div style="float: right;"><span
-                            style="background: #949494; color: #000000; padding: 4px 10px; border-radius:12px; font-size: 11p; font-weight: bold;">PENDIENTE</span>
+                <article class="card p-3 mb-3 border-start border-5 border-secondary position-relative">
+                    <div class="d-flex justify-content-between align-items-start">
+                        <div>
+                            <h5 class="mb-1 text-white">Día 3 - Martes 09/01</h5>
+                            <p class="text-white small mb-0">18:00 PM - 05:00 AM | Locación: Cementerio</p>
+                        </div>
+                        <span class="badge border border-secondary text-secondary">PENDIENTE</span>
                     </div>
-                    <h3 style="margin-bottom: 5px"> Día 3 - Martes 09/01 </h3>
-                    <p style="color: #AAA; font-size: 14px;">
-                        18:00 PM - 05:00 AM | Locación: Cementerio Recoleta
-                    </p>
-                    <div Style="clear: both;"></div>
-
                 </article>
 
             </section>
+
         </div>
+    </div>
 
-    </main>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
